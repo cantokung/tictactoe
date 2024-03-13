@@ -1,0 +1,120 @@
+html, body {
+    height: 100%; /* This makes sure that the body takes full viewport height */
+    margin: 0; /* Removes the default margin */
+    display: grid;
+    justify-content: center;
+    align-items: center; /* This vertically centers the content */
+}
+div {
+    border: none;
+}
+
+.header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+.grid {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* To show it's clickable */
+    border: 1px solid #fff; /* Style as needed */
+    background: #000; /* Style as needed */
+    color: #fff; /* Style as needed */
+    font-size: 1.5em;
+}
+.ttt {
+    display: grid;
+    grid-template-columns: repeat(3, 80px); /* Defines 3 columns */
+    grid-template-rows: repeat(3, 80px); /* Defines 3 rows */
+    gap: 10px; /* Adds space between cells */
+    justify-content: center;
+    align-content: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+  
+  /* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#resultDialog {
+    /* display: none; Remove this line as it's unnecessary */
+    position: fixed;
+    z-index: 9999; /* Ensure it's higher than other page elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#resultDialog .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+#resultDialog button {
+    margin: 10px;
+}
+
+.current-turn {
+    font-weight: bold;
+    color: red;
+}
+
+.player1-turn {
+    font-weight: bold;
+    color: red;
+}
+
+.player2-turn {
+    font-weight: bold;
+    color: red;
+}
